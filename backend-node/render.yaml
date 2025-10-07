@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: cinelove-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    # Add these environment variables in Render dashboard:
+    # MONGO_URL: your_mongodb_connection_string
+    # TMDB_API_KEY: your_tmdb_api_key
+    # CORS_ORIGINS: https://your-frontend-domain.vercel.app
